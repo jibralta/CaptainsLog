@@ -33,11 +33,14 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // code to show the saved items of lists
-
-//    list.append(addToDoField.text)
         listNameLabel.text = listName
-
+        
+        list.append(ToDoList(name: "Swab the deck!", completed: false))
+        list.append(ToDoList(name: "Stock the bar!!", completed: false))
+        list.append(ToDoList(name: "Patch the leaks.", completed: false))
+        list.append(ToDoList(name: "Find the first mate.", completed: false))
+        list.append(ToDoList(name: "Hire crew", completed: false))
+        list.append(ToDoList(name: "Train crew to fend off pirates.", completed: false))
     }
     
 // checkk this add function code...
