@@ -15,6 +15,10 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var list = [ToDoList]()
+//        var list = [String]
+
+    
+    var listName = ""
     
 // Dummy text for testing...
 //        var list = [
@@ -76,7 +80,7 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
         
         list.append(item)
         
-//        list = list.reversed() 
+//      list = list.reversed()
         tableView.reloadData()
     }
 }

@@ -15,10 +15,18 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var listOfLists = [ListOfLists]()
     
+    var selectIndexPath: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-// code to show the saved list of lists
+//        code to show the saved list of lists
+        
+//        listOfLists = ListOfLists.[ToDoList]
+        
+//        listNameLabel.text = ListOfLists(nameOfList: name!)
+        
+//        listOfLists.append(ListOfLists(nameOfList: name!))
     
     }
 
@@ -45,13 +53,39 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // user selected an index path
+        selectIndexPath = indexPath
+        
+        //segue into the next view
+        performSegue(withIdentifier: "To_ToDoList", sender: self)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-    }
-
+        if let x = segue.destination as? ToDoListVC {
+            if let sender = sender as? String {
+                x.listName = sender
+                
+                // sender is the to do list title which is the data in the selected row
+            }
+        }
+        
+        
+        
+//        if let destination = segue.destination as? ToDoListVC {
+//            if let selectIndexPath = selectIndexPath {
+//                destination.item = listOfLists[selectIndexPath.row]
+//                
+//                // show tableView data for second screen associated to selected row in List Screen.
+//                // update listNameLabel on second screen to equal label from selected row
+//         }
+//        
+//    }
+}
 
     @IBAction func addListNameEntered(_ sender: Any) {
         // add a new list to the list of lists
@@ -63,6 +97,6 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         listOfLists.append(item)
         
         firstTableView.reloadData()
-        
+        addListNameField.text = ""
     }
 }

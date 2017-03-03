@@ -146,7 +146,7 @@
                                     <outlet property="delegate" destination="hrS-Vw-YTH" id="Bpt-XI-64E"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="create a list" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9xv-cR-zEe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+ create a list" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9xv-cR-zEe">
                                 <rect key="frame" x="16" y="20" width="278" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -167,7 +167,7 @@
                     <connections>
                         <outlet property="addListNameField" destination="9xv-cR-zEe" id="2sG-hd-1hb"/>
                         <outlet property="firstTableView" destination="HdX-8y-Mpl" id="pFt-fr-vMA"/>
-                        <segue destination="Vy7-fj-bgZ" kind="show" identifier="TheSegue" id="ZSb-9z-atC"/>
+                        <segue destination="Vy7-fj-bgZ" kind="show" identifier="To_ToDoList" id="2SJ-D7-FoQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9M-xi-D8Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
