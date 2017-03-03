@@ -17,18 +17,6 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
     
     var list = [ToDoList]()
     var listName = " "
-
-    
-// Dummy text for testing...
-//        var list = [
-//        "buy groceries",
-//        "wash car",
-//        "buy dog food",
-//        "go on long hike",
-//        "pay bills",
-//        "fix leaky roof",
-//        "buy and drink wine"
-//        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

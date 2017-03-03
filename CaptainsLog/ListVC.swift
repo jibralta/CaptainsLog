@@ -22,7 +22,6 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         listOfLists.append(ListOfLists(nameOfList: "Prepare for Journey Through the Seven Seas!"))
         
-        listOfLists.append(ListOfLists(nameOfList: "Prepare for Segue!!"))
     }
 
     override func didReceiveMemoryWarning() {
