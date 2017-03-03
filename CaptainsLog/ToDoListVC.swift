@@ -23,12 +23,12 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
 
         listNameLabel.text = listName
         
-        list.append(ToDoList(name: "Swab the deck!", completed: false))
-        list.append(ToDoList(name: "Stock the bar!!", completed: false))
-        list.append(ToDoList(name: "Patch the leaks.", completed: false))
-        list.append(ToDoList(name: "Find the first mate.", completed: false))
-        list.append(ToDoList(name: "Hire crew", completed: false))
-        list.append(ToDoList(name: "Train crew to fend off pirates.", completed: false))
+//        list.append(ToDoList(name: "Swab the deck!", completed: false))
+//        list.append(ToDoList(name: "Stock the bar!!", completed: false))
+//        list.append(ToDoList(name: "Patch the leaks.", completed: false))
+//        list.append(ToDoList(name: "Find the first mate.", completed: false))
+//        list.append(ToDoList(name: "Hire crew", completed: false))
+//        list.append(ToDoList(name: "Train crew to fend off pirates.", completed: false))
     }
     
 // checkk this add function code...

@@ -22,6 +22,23 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         listOfLists.append(ListOfLists(nameOfList: "Prepare for Journey Through the Seven Seas!"))
         
+        listOfLists[0].list.append(ToDoList(name: "Buy a ship!!", completed: false))
+        
+        listOfLists[0].list.append(ToDoList(name: "Find the first mate.", completed: false))
+        
+        listOfLists[0].list.append(ToDoList(name: "Stock the bar!!", completed: false))
+        
+        listOfLists[0].list.append(ToDoList(name: "Hire crew", completed: false))
+        
+        listOfLists[0].list.append(ToDoList(name: "Train crew to fend off pirates.", completed: false))
+        
+        listOfLists[0].list.append(ToDoList(name: "Train crew to fend off pirates.", completed: false))
+        
+        listOfLists.append(ListOfLists(nameOfList: "Prepare for Segue!!!"))
+        
+        listOfLists[1].list.append(ToDoList(name: "Connect first VC to second VC.", completed: false))
+
+        
     }
 
     override func didReceiveMemoryWarning() {

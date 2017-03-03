@@ -18,7 +18,7 @@ class ListOfLists {
     init(nameOfList: String) {
         self.nameOfList = nameOfList
         self.completed = false
-        self.list = [ToDoList(name: "Buy a boat.", completed: false)]
+        self.list = [ToDoList(name: "Prepare to PREPARE!!", completed: false)]
     }
     
 }
