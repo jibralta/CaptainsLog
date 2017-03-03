@@ -15,19 +15,14 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var listOfLists = [ListOfLists]()
     
-    var selectIndexPath: IndexPath?
+    var selectedIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        code to show the saved list of lists
+        listOfLists.append(ListOfLists(nameOfList: "Prepare for Journey Through the Seven Seas!"))
         
-//        listOfLists = ListOfLists.[ToDoList]
-        
-//        listNameLabel.text = ListOfLists(nameOfList: name!)
-        
-//        listOfLists.append(ListOfLists(nameOfList: name!))
-    
+        listOfLists.append(ListOfLists(nameOfList: "Prepare for Segue!!"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,35 +51,27 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // user selected an index path
-        selectIndexPath = indexPath
+        selectedIndexPath = indexPath
         
         //segue into the next view
-        performSegue(withIdentifier: "To_ToDoList", sender: self)
+        self.performSegue(withIdentifier: "To_ToDoList", sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if let x = segue.destination as? ToDoListVC {
-            if let sender = sender as? String {
-                x.listName = sender
+        if let destination = segue.destination as? ToDoListVC {
+            
+            if let selectedIndexPath = selectedIndexPath {
+                
+                destination.list = listOfLists[selectedIndexPath.row].list
+                
+                destination.listName = listOfLists[selectedIndexPath.row].nameOfList
                 
                 // sender is the to do list title which is the data in the selected row
             }
         }
-        
-        
-        
-//        if let destination = segue.destination as? ToDoListVC {
-//            if let selectIndexPath = selectIndexPath {
-//                destination.item = listOfLists[selectIndexPath.row]
-//                
-//                // show tableView data for second screen associated to selected row in List Screen.
-//                // update listNameLabel on second screen to equal label from selected row
-//         }
-//        
-//    }
 }
 
     @IBAction func addListNameEntered(_ sender: Any) {

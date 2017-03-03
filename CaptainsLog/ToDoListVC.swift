@@ -10,15 +10,14 @@ import UIKit
 
 class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
 
+    
     @IBOutlet weak var listNameLabel: UILabel!
     @IBOutlet weak var addToDoField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     var list = [ToDoList]()
-//        var list = [String]
+    var listName = " "
 
-    
-    var listName = ""
     
 // Dummy text for testing...
 //        var list = [
@@ -37,6 +36,7 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
         // code to show the saved items of lists
 
 //    list.append(addToDoField.text)
+        listNameLabel.text = listName
 
     }
     
@@ -82,5 +82,7 @@ class ToDoListVC: UIViewController, UITableViewDataSource,UITableViewDelegate {
         
 //      list = list.reversed()
         tableView.reloadData()
+        addToDoField.text = ""
+
     }
 }

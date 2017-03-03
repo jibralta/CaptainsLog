@@ -9,8 +9,6 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var countLabel: UITextField!
     
     @IBOutlet weak var listName: UITextField!
     
